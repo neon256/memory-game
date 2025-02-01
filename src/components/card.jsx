@@ -17,7 +17,6 @@ const Card = ({children, setActiveCard, activeCard, winCard, loseCard, index}) =
                 setLose(false);
                 setActive(false);
             }
-            
           }, 900)
         return timerId
     }
