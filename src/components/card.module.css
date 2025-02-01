@@ -1,0 +1,27 @@
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    background: #b0079c;
+    border-radius: 30px;
+    font-size: 0px;
+    transform: rotateY(0deg);
+    transition:  0.5s transform;
+  }
+  
+  .active{
+    background: #fff;
+    transform: rotateY(180deg);
+    transition: 0.5s;
+    font-size: 40px;
+  }
+
+  .win{
+    background: #258119;
+  }
+
+  .lose{
+    background: rgb(208, 24, 7);
+  }
