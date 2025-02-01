@@ -4,7 +4,7 @@ const Card = ({children, setActiveCard, activeCard, winCard, loseCard, index}) =
     const [active, setActive] = useState(false)
     const [win, setWin] = useState(false)
     const [lose, setLose] = useState(false)
-    function activate(){
+    function activate(e){
         setActive(!active)
         setActiveCard([...activeCard, children, index])
     }

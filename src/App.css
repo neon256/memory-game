@@ -24,9 +24,6 @@
   font-size: 20px;
   padding:0 10px;
 }
-
-.form__input{}
-
 .form__button{
   padding: 5px 30px;
   font-size: 15px;
@@ -37,4 +34,12 @@
   border-color: #0a8e27;
   box-shadow: none;
   
+}
+
+.timer{
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
