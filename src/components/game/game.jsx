@@ -23,8 +23,9 @@ function Game() {
     if (value > 10 || value <= 0) {
       return alert('Количество должно быть от 1 до 10')
     }
-    let newArr = arr.splice(0, value)
-    let shufledArray = [...newArr.sort(() => Math.random() - 0.5), ...newArr.sort(() => Math.random() - 0.5)];
+    let newArr = arr
+    let spliceArr =  newArr.splice(0, value)
+    let shufledArray = [...spliceArr.sort(() => Math.random() - 0.5), ...spliceArr.sort(() => Math.random() - 0.5)];
     let shufledCards = shufledArray.sort(() => Math.random() - 0.5)
     setRes(shufledCards.filter((e) => {
       return e;
