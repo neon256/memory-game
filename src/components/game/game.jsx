@@ -3,6 +3,7 @@ import '../../App.css';
 import { useEffect, useState } from 'react';
 import Countdown from 'react-countdown';
 import Card from '../card/card';
+import { useNavigate } from 'react-router-dom';
 
 ///,
 function Game() {
@@ -15,6 +16,7 @@ function Game() {
   const [start, setStart] = useState(false)
   const [count, setCount] = useState(0);
   const [date, setDate] = useState(Date.now())
+  const navigate = useNavigate()
   function startGame(e) {
     e.preventDefault()
     if (start === true) {
@@ -54,8 +56,8 @@ function Game() {
     if (count == value) {
       setStart(false)
       setLoseCard([])
-      alert('Победа!!!')
-      return setCount(0)
+      setCount(0)
+      return navigate('/win')
     }
   }, [count])
 
