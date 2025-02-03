@@ -1,0 +1,151 @@
+.container{
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    height: 37vh;
+    font-size: 40px;
+    color: #fff;
+}
+.button__container{
+    height: 30vh;
+    display: flex;
+    align-items: end;
+    gap: 10px;
+}
+.button{
+    padding: 10px 40px;
+    border-radius: 30px;
+    background: #00be53;;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    transition: 0.5s;
+}
+.button:hover{
+    background: #01aa4a;
+}
+.triangle{
+    width: 130px;
+    height: 100px;
+    /* border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px; */
+    background: rgb(255, 214, 10);
+    transform: rotateZ(-30deg);
+    position: relative;
+    
+}
+
+.triangle::before{
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -35px;
+    width: 70px;
+    height: 71px;
+    transform: rotateZ(45deg);
+    background: rgb(255, 214, 10);
+    opacity: 1;
+}
+
+.triangle::after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 90px;
+    width: 10px;
+    height: 100px;
+    border-right: 10px solid red;
+    border-left: 10px solid blue;
+}
+
+.circle{
+    width: 30px;
+    height: 30px;
+    border: 4px solid blue;
+    border-radius: 50%;
+    position: absolute;
+    top: 33%;
+    right: 50%;
+    animation: circle 1s linear reverse;
+    animation-fill-mode: forwards;
+    z-index: -1;
+    offset-path: path("M 120, 0 C 150,140 0,140 0,130");
+}
+
+.circle::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border: 3px solid blue;
+    border-radius: 50%;
+    transform: translateX(9.7px) translateY(-9.7px);
+}
+
+.circle2{
+    width: 30px;
+    height: 30px;
+    border: 4px solid red;
+    border-radius: 50%;
+    position: absolute;
+    top:37%;
+    z-index: -1;
+    offset-path: path('M 0,120 C 120,60 140,55 145,91 C145,91 150,100 160,120 ');
+    animation: circle 1s linear;
+    animation-fill-mode: forwards;
+}
+
+.circle2::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    border: 3px solid red;
+    border-radius: 50%;
+    transform: translateX(9.7px) translateY(-9.7px);
+}
+.conviti{
+    position: absolute;
+    top: 25%;
+    left: 52%;
+    z-index: -1;
+    animation: circle 1s linear;
+    animation-fill-mode: forwards;
+    offset-path: path('M 0,120 L 110, 0');
+}
+.conviti2{
+    position: absolute;
+    top: 25%;
+    left: 52%;
+    z-index: -1;
+    animation: circle 1s linear;
+    animation-fill-mode: forwards;
+    offset-path: path('M 0,120 L 170, 90');
+}
+.conviti3{
+    position: absolute;
+    top: 25%;
+    left: 52%;
+    z-index: -1;
+    animation: circle 1s linear;
+    animation-fill-mode: forwards;
+    offset-path: path('M 0,120 L 170,30');
+}
+@keyframes circle {
+    0% { 
+        offset-distance: 0%; /* стартуем в начале траектории */
+      }
+      100% { 
+        offset-distance: 100%; /* и прекращаем движение в конце траектории */
+      }
+}
+
